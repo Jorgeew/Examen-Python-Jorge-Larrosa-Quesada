@@ -12,7 +12,22 @@ def read_data():
     return dict
 
 def split(dict1):
-    print(dict1['dato1'].keys() == 'type')
+    dictWhite = {}
+    dictRed = {}
+    for i in dict1.keys():
+        for key, value in dict1[i].items():
+            if(key == 'type'):
+                if(dict1[i]['type'] == 'white'):
+                    dictWhite[i] = dict1[i]
+                else:
+                    if(dict1[i]['type'] == 'red'):
+                        dictRed[i] = dict1[i]
+
+    return dictWhite, dictRed
+
+   
+   
+        
     
 
 
