@@ -25,12 +25,19 @@ def split(dict1):
 
     return dictWhite, dictRed
 
+def reduce(dict1, atributo):
+    #print(dict1.items())
+    for i in dict1.keys():
+        for key, values in dict1[i].items():
+            if(key == atributo):
+                print(dict1[i][atributo])
+
+
+
+
    
    
         
     
 
 
-
-dictWine = read_data()
-split(dictWine)
