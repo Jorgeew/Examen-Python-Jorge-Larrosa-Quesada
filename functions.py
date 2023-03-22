@@ -26,19 +26,20 @@ def split(dict1):
     return dictWhite, dictRed
 
 def reduce(dict1, atributo):
+        list1 = []
         count = 0
         for i in dict1.keys():
             for key, values in dict1[i].items():
                 if(key == atributo):
-                    list.append([dict1[i][atributo]])
+                    info = [dict1[i][atributo]]
+                    list1.append(info)
                     count += 1
                         
             if(count == 0):
                 raise ValueError("Ha ocurrido una excepción donde el atributo no existe")
             else:
                 count = 0
-        print(list)
-        return list
+        return list1
 
 
 
